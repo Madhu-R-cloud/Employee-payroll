@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Payroll App</title>
+    <link rel="stylesheet" href="../index.css">
+    <link rel="icon" href="../assets//logo.png">
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+
+</head>
+
+<body>
+    <div class="fullView">
+        <div class="header">
+
+            <div class="headerCol">
+                <img src="../assets//logo.png" alt="Empty" width="50px" height="47px">
+                <div class="headerCol1">
+                    <span>
+                        EMPLOYEE
+                    </span>
+                    <div class="headerCol2">
+                        PAYROLL
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+        <div class="body-cnt">
+
+            <div class="form-outer-cnt">
+                <div class="form-inner-cnt">
+                    <div class="label-input-cnt">
+                        <span>Employee Payroll Form</span>
+                    </div>
+                    <div class="label-input-cnt">
+                        <div class="form-input-label"><span>Name</span></div>
+                        <div class="form-label">
+                            <div class="form-text-input-label">
+                                <input type="text" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="label-input-cnt">
+                        <div class="form-input-label"><span>Profile image</span></div>
+                        <div class="form-label"><input type="radio" name="profileImage" /> <img
+                                src="../assets/profile1.png" alt="profile1"> </div>
+                        <div class="form-label"><input type="radio" name="profileImage" /><img
+                                src="../assets/profile2.png" alt="profile1"> </div>
+                        <div class="form-label"><input type="radio" name="profileImage" /><img
+                                src="../assets/profile3.png" alt="profile1"> </div>
+                        <div class="form-label"><input type="radio" name="profileImage" /><img
+                                src="../assets/profile4.png" alt="profile1"> </div>
+
+                    </div>
+                    <div class="label-input-cnt">
+                        <div class="form-input-label"><span>Gender</span></div>
+                        <div class="form-gender-label">
+                            <input type="radio" id="gender" name="gender" value="Gender" />
+                            <label for="gender">Male</label>
+                        </div>
+                        <div class="form-label">
+                            <input type="radio" id="gender" name="gender" value="Gender" />
+                            <label for="gender">Female</label>
+                        </div>
+                    </div>
+                    <div class="label-input-cnt">
+                        <div class="form-Dept-label"><span>Department</span></div>
+                        <div class="form-checkbox-input-label">
+                            <div>
+                                <input type="checkbox" id="HR" name="HR" />
+                                <label for="HR">HR</label>
+                            </div>
+
+                            <div>
+                                <input type="checkbox" id="sales" name="sales" />
+                                <label for="sales">Sales</label>
+                            </div>
+
+                            <div>
+                                <input type="checkbox" id="Finance" name="Finance" />
+                                <label for="Finance">Finance</label>
+                            </div>
+
+                            <div>
+                                <input type="checkbox" id="Engineer" name="Engineer" />
+                                <label for="Engineer">Engineer</label>
+                            </div>
+
+                            <div>
+                                <input type="checkbox" id="Others" name="Others" />
+                                <label for="Others">Others</label>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="label-input-cnt">
+                        <div class="form-input-label"><span>Salary</span></div>
+                        <div class="form-gender-label">
+                            <input type="range" id="salary" name="salary" min="1000" max="100000" />
+
+                        </div>
+                    </div>
+
+                    <div class="label-input-date-cnt">
+                        <div class="form-input-date-label"><span>Start Date</span></div>
+                        <div class="form-date-label">
+                
+                                <select name="startday" class="startdate">
+                                    <option value="" disabled selected>Day</option>
+                                    <option value="Monday">Monday</option>
+                                    <option value="Tuesday">Tuesday</option>
+                                    <option value="Wednesday">Wednesday</option>
+                                    <option value="Thursday">Thursday</option>
+                                    <option value="Frclassay">Frclassay</option>
+                                    <option value="Saturday">Saturday</option>
+                                    <option value="Sunday">Sunday</option>
+                                </select>
+                
+                
+                                <select id="day" name="month" class="startyear">
+                                    <option value="" disabled selected>Month</option>
+                                    <option value="1">January</option>
+                                    <option value="2">February</option>
+                                    <option value="3">March</option>
+                                    <option value="4">April</option>
+                                    <option value="5">May</option>
+                                    <option value="6">June</option>
+                                    <option value="7">July</option>
+                                    <option value="8">August</option>
+                                    <option value="9">September</option>
+                                    <option value="10">October</option>
+                                    <option value="11">November</option>
+                                    <option value="12">December</option>
+                                </select>
+
+                            <select id="day" name="year" class="startyear">
+                                    <option value="" disabled selected>Year</option>
+                                    <script>
+                                        const currentYear = new Date().getFullYear();
+                                        for (let year = 1900; year <= currentYear; year++) {
+                                            document.write(`<option value="${year}">${year}</option>`);
+                                        }
+                                    </script>
+                                </select>
+                        </div>
+                    </div>
+
+                    <div class="label-input-cnt">
+                        <div class="form-Dept-label"><span>Note</span></div>
+                        
+                        <div class="note">
+                            <textarea id="note"></textarea>
+                    
+                      </div>
+                      
+
+            </div>
+
+            <div class="label-input-cnt">
+                <div class="submission">
+                    <div class="cancel"><input type="submit" id="cancel" value="Cancel"  style="height:50px; width:180px" /></div>
+                    <div class="submit"><input type="submit" class="submitEvent" value="Submit"  style="height:50px; width:180px" /></div>
+                    <div class="reset"><input type="submit" id="reset" value="Reset"  style="height:50px; width:180px" /></div>
+            
+              </div>
+        </div>
+        </div>
+    </div>
+    </div>
+    </div>
+
+    </div>
+    <script type="module" src="../js/emp.js"></script>
+    <script type="module" src="../js/EmployeeDetails.js"></script>
+</body>
+
+</html>
