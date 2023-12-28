@@ -41,59 +41,61 @@
                         <div class="form-input-label"><span>Name</span></div>
                         <div class="form-label">
                             <div class="form-text-input-label">
-                                <input type="text" />
+                                <input type="text" name="name" id="name123"/>
                             </div>
                         </div>
                     </div>
                     <div class="label-input-cnt">
-                        <div class="form-input-label"><span>Profile image</span></div>
-                        <div class="form-label"><input type="radio" name="profileImage" /> <img
-                                src="../assets/profile1.png" alt="profile1"> </div>
-                        <div class="form-label"><input type="radio" name="profileImage" /><img
-                                src="../assets/profile2.png" alt="profile1"> </div>
-                        <div class="form-label"><input type="radio" name="profileImage" /><img
-                                src="../assets/profile3.png" alt="profile1"> </div>
-                        <div class="form-label"><input type="radio" name="profileImage" /><img
-                                src="../assets/profile4.png" alt="profile1"> </div>
+                        <div class="form-input-label">
+                            <span>Profile image</span>
+                        </div>
+                        <div class="form-label"><input type="radio" name="profileImage" value="../assets/profile1.png" /> <img
+                                src="../assets/profile1.png" alt="profile1" style="margin-right: 50px;"> </div>
+                        <div class="form-label"><input type="radio" name="profileImage" value="../assets/profile2.png"/><img
+                                src="../assets/profile2.png" alt="profile2" style="margin-right: 50px;"> </div>
+                        <div class="form-label"><input type="radio" name="profileImage" value="../assets/profile3.png"/><img
+                                src="../assets/profile3.png" alt="profile3" style="margin-right: 50px;"> </div>
+                        <div class="form-label"><input type="radio" name="profileImage" value="../assets/profile4.png"/><img
+                                src="../assets/profile4.png" alt="profile4" style="margin-right: 50px;"> </div>
 
                     </div>
                     <div class="label-input-cnt">
                         <div class="form-input-label"><span>Gender</span></div>
                         <div class="form-gender-label">
-                            <input type="radio" id="gender" name="gender" value="Gender" />
+                            <input type="radio" id="gender" name="gendername" value="Male" />
                             <label for="gender">Male</label>
                         </div>
                         <div class="form-label">
-                            <input type="radio" id="gender" name="gender" value="Gender" />
+                            <input type="radio" id="gender" name="gendername" value="Female" />
                             <label for="gender">Female</label>
                         </div>
                     </div>
                     <div class="label-input-cnt">
-                        <div class="form-Dept-label"><span>Department</span></div>
+                        <div class="form-input-label"><span>Department</span></div>
                         <div class="form-checkbox-input-label">
                             <div>
-                                <input type="checkbox" id="HR" name="HR" />
-                                <label for="HR">HR</label>
+                                <input type="checkbox" class="dept" id="hr" name="HR" value="HR"/>
+                                <label for="HR" style="margin-right: 20px;">HR</label>
                             </div>
 
                             <div>
-                                <input type="checkbox" id="sales" name="sales" />
-                                <label for="sales">Sales</label>
+                                <input type="checkbox" class="dept" id="sales" name="sales" value="Sales"/>
+                                <label for="sales" style="margin-right: 20px;">Sales</label>
                             </div>
 
                             <div>
-                                <input type="checkbox" id="Finance" name="Finance" />
-                                <label for="Finance">Finance</label>
+                                <input type="checkbox" class="dept" id="finance" name="Finance" value="Finance"  />
+                                <label for="Finance" style="margin-right: 20px;">Finance</label>
                             </div>
 
                             <div>
-                                <input type="checkbox" id="Engineer" name="Engineer" />
-                                <label for="Engineer">Engineer</label>
+                                <input type="checkbox" class="dept" id="engineer" name="Engineer" value="Engineer" />
+                                <label for="Engineer" style="margin-right: 20px;">Engineer</label>
                             </div>
 
                             <div>
-                                <input type="checkbox" id="Others" name="Others" />
-                                <label for="Others">Others</label>
+                                <input type="checkbox" class="dept" id="others" name="Others" value="Others"/>
+                                <label for="Others" style="margin-right: 20px;">Others</label>
                             </div>
 
                         </div>
@@ -101,48 +103,47 @@
                     <div class="label-input-cnt">
                         <div class="form-input-label"><span>Salary</span></div>
                         <div class="form-gender-label">
-                            <input type="range" id="salary" name="salary" min="1000" max="100000" />
+                            <input type="range" id="rangeInput" class="rangeClass" min="1" max="10" step="1" value="50">
 
                         </div>
                     </div>
 
                     <div class="label-input-date-cnt">
-                        <div class="form-input-date-label"><span>Start Date</span></div>
+                        <div class="form-input-date-label" style="margin-left: 50px;"><span>Start Date</span></div>
                         <div class="form-date-label">
                 
-                                <select name="startday" class="startdate">
+                                <select name="startday" class="startdate" style="margin-right: 30px;" id="day">
                                     <option value="" disabled selected>Day</option>
-                                    <option value="Monday">Monday</option>
-                                    <option value="Tuesday">Tuesday</option>
-                                    <option value="Wednesday">Wednesday</option>
-                                    <option value="Thursday">Thursday</option>
-                                    <option value="Frclassay">Frclassay</option>
-                                    <option value="Saturday">Saturday</option>
-                                    <option value="Sunday">Sunday</option>
+                                    <script>
+                                    
+                                        for (let month= 1; month <= 31; month++) {
+                                            document.write(`<option value="${month}">${month}</option>`);
+                                        }
+                                    </script>
                                 </select>
                 
                 
-                                <select id="day" name="month" class="startyear">
+                                <select id="month" name="month" class="startdate" style="margin-right: 30px;">
                                     <option value="" disabled selected>Month</option>
-                                    <option value="1">January</option>
-                                    <option value="2">February</option>
-                                    <option value="3">March</option>
-                                    <option value="4">April</option>
-                                    <option value="5">May</option>
-                                    <option value="6">June</option>
-                                    <option value="7">July</option>
-                                    <option value="8">August</option>
-                                    <option value="9">September</option>
-                                    <option value="10">October</option>
-                                    <option value="11">November</option>
-                                    <option value="12">December</option>
+                                    <option value="Jan">Jan</option>
+                                    <option value="Feb">Feb</option>
+                                    <option value="Mar">Mar</option>
+                                    <option value="Apr">Apr</option>
+                                    <option value="May">May</option>
+                                    <option value="Jun">Jun</option>
+                                    <option value="Jul">Jul</option>
+                                    <option value="Aug">Aug</option>
+                                    <option value="Sep">Sep</option>
+                                    <option value="Oct">Oct</option>
+                                    <option value="Nov">Nov</option>
+                                    <option value="Dec">Dec</option>
                                 </select>
 
-                            <select id="day" name="year" class="startyear">
+                            <select id="year" name="year" class="startdate" style="margin-right: 30px;" >
                                     <option value="" disabled selected>Year</option>
                                     <script>
                                         const currentYear = new Date().getFullYear();
-                                        for (let year = 1900; year <= currentYear; year++) {
+                                        for (let year = 2000; year <= currentYear; year++) {
                                             document.write(`<option value="${year}">${year}</option>`);
                                         }
                                     </script>
@@ -151,7 +152,7 @@
                     </div>
 
                     <div class="label-input-cnt">
-                        <div class="form-Dept-label"><span>Note</span></div>
+                        <div class="form-Dept-label" style="margin-top: 30px;"><span>Notes</span></div>
                         
                         <div class="note">
                             <textarea id="note"></textarea>
@@ -163,9 +164,9 @@
 
             <div class="label-input-cnt">
                 <div class="submission">
-                    <div class="cancel"><input type="submit" id="cancel" value="Cancel"  style="height:50px; width:180px" /></div>
-                    <div class="submit"><input type="submit" class="submitEvent" value="Submit"  style="height:50px; width:180px" /></div>
-                    <div class="reset"><input type="submit" id="reset" value="Reset"  style="height:50px; width:180px" /></div>
+                    <div class="cancel"><input type="submit" class="cancelEvent" id="cancelBtn" value="Cancel"  style="height:35px; width:180px" /></div>
+                    <div class="submit"><input type="submit" class="submitEvent" id="submitBtn" value="submit"   style="height: 35px; width:180px" /></div>
+                    <div class="reset"><input type="submit" class="cancelEvent" id="resetBtn" value="Reset"  style="height:35px; width:180px" /></div>
             
               </div>
         </div>
@@ -175,8 +176,9 @@
     </div>
 
     </div>
-    <script type="module" src="../js/emp.js"></script>
-    <script type="module" src="../js/EmployeeDetails.js"></script>
+    <script src="../js/employeeForm.js"></script>
+    <script src="../js/EmployeeDetails.js"></script>
 </body>
 
 </html>
+
