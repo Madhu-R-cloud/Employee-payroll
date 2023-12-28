@@ -8,6 +8,8 @@
     <link rel="icon" href="../assets/logo.png">
     <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
     <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    
 
 
 </head>
@@ -22,8 +24,62 @@
                     <div class="employee-payroll-bottom"><label for="Employee">PayRoll</label>   </div>    
        
                      </div>
+            </div></div>
+            <div class="dashboard-body-view">
+
+                <div class="emp-details" id="empDe">Employee Details
+                <div class="dashboard-search-cnt">
+                    <input type="search" id="searchInput" class="dashboard-search-cnt" \>
+                    <i class='bx bx-search-alt-2'></i>
+                </div>
+                <div class="add-user">
+                    <div class="plus" id="addUserBtn">
+                        <i class='bx bx-plus' style="display: flex; color: aliceblue;">Add User</i>
+                    </div>
+                </div>
             </div>
+        
+                        <table>
+                        <thead>
+                            <tr>
+                               
+                                    <th></th>
+                                    <th>NAME</th>
+                              
+                                    <th>GENDER</th>
+                                
+                                    <th>DEPARTMENT</th>
+                              
+                                    <th>SALARY</th>
+                               
+                                    <th>START DATE</th>
+                              
+                                    <th>ACTION</th>
+                               
+                            </tr>
+                        </thead>
+
+                  
+                        <tbody id="tableBody">
+                            
+                        </tbody>
+
+                    </div>
+                    
+                </table>
+           
+        </div>
+        
+        <div class="display-details-body">
+        
+        </div>
+        </div>
+       
         </div>
     </div>
+    <script src="../js/EmpDashboard.js"></script>
+<script src="../js/EmployeeDetails.js"></script>
+
+    
 </body>
 </html>
